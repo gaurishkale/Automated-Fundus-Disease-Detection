@@ -1,71 +1,198 @@
-# 👁️ Automated Fundus Disease Detection
+# 👁️ Automated-Fundus-Disease-Detection
+### AI-Powered Retinal Disease Screening & Intelligent Ophthalmology Assistant
 
-An AI-powered deep learning system for the automated detection and classification of retinal diseases from fundus images. This project leverages computer vision and convolutional neural networks (CNNs) to assist in the early diagnosis of eye diseases, helping healthcare professionals make faster and more accurate decisions.
+EyeDetect AI is an end-to-end healthcare platform that combines **Deep Learning-based Fundus Disease Detection**, a **Multilingual AI Medical Chatbot**, **Voice Assistant**, **Patient Management**, and **Clinical Analytics** to support early screening and awareness of retinal diseases.
 
-## 📌 Overview
+The system analyzes retinal fundus images, predicts possible eye diseases, generates detailed reports, provides preventive guidance, and offers an AI-powered ophthalmology assistant for patient education.
 
-Retinal diseases such as Diabetic Retinopathy, Glaucoma, Cataract, and Age-related Macular Degeneration can lead to vision impairment if not detected early. Manual diagnosis from fundus images is time-consuming and requires expert ophthalmologists.
-
-This project aims to automate the disease detection process using deep learning models trained on retinal fundus images, enabling rapid and reliable screening.
+---
 
 ## 🚀 Features
 
-- Automated retinal disease classification
-- Deep Learning-based image analysis
-- Fundus image preprocessing and enhancement
-- Disease prediction with confidence scores
-- Easy-to-use workflow for inference
-- Scalable architecture for adding new disease categories
+### 🔍 AI Fundus Disease Detection
+- Upload retinal/fundus images
+- Automated disease prediction
+- Confidence score generation
+- Risk-level assessment
+- Fast AI-powered screening
 
-## 🧠 Technologies Used
+### 🤖 AI Ophthalmology Chatbot
+- Intelligent eye-health assistant
+- Disease awareness and education
+- Symptom-based guidance
+- Context-aware RAG knowledge retrieval
+- Instant response generation
 
+### 🌐 Multilingual Support
+- English
+- Hindi
+- Marathi
+
+### 🎤 Voice Assistant
+- Speech-to-Text using Faster-Whisper
+- Text-to-Speech using Edge-TTS
+- Voice-enabled interaction with chatbot
+
+### 👨‍⚕️ Patient Management
+- Patient information storage
+- Session-based consultation flow
+- Personalized AI interactions
+
+### 📊 Analytics Dashboard
+- Screening statistics
+- Disease distribution
+- Risk analysis
+- Monthly screening trends
+- Clinical insights visualization
+
+### 📁 Scan History
+- Store previous screenings
+- Review past reports
+- Download generated reports
+- Track disease progression
+
+### 🏥 Doctor Finder
+- Locate nearby healthcare professionals
+- Connect patients with specialists
+
+### 🛡 Preventive Healthcare
+- Eye care recommendations
+- Disease prevention guidance
+- Lifestyle improvement suggestions
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Patient
+   │
+   ▼
+React Frontend
+   │
+   ▼
+FastAPI Backend
+   │
+   ├── Disease Detection Model
+   │       │
+   │       ▼
+   │   Prediction Result
+   │
+   ├── AI Chatbot
+   │       │
+   │       ├── RAG Knowledge Base
+   │       ├── Language Detection
+   │       └── Ollama Phi-3 Mini
+   │
+   ├── Speech-to-Text
+   │       ▼
+   │   Faster Whisper
+   │
+   └── Text-to-Speech
+           ▼
+       Edge TTS
+```
+
+---
+
+## 🧠 Supported Eye Conditions
+
+- Diabetic Retinopathy
+- Glaucoma
+- Cataract
+- Age-related Macular Degeneration (AMD)
+- Retinal Detachment
+- Dry Eye Syndrome
+- Hypertensive Retinopathy
+- Myopia
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- React Router
+- Framer Motion
+- Recharts
+- Axios
+
+### Backend
 - Python
-- TensorFlow / Keras
-- OpenCV
+- FastAPI
+- Pydantic
+
+### AI & Machine Learning
+- Deep Learning
+- Computer Vision
+- Fundus Image Classification
+- Retrieval-Augmented Generation (RAG)
+
+### LLM
+- Ollama
+- Phi-3 Mini
+
+### Voice AI
+- Faster-Whisper
+- Edge-TTS
+
+### Data Processing
 - NumPy
 - Pandas
-- Matplotlib
-- Scikit-learn
-- Jupyter Notebook
+- OpenCV
+
+---
 
 ## 📂 Project Structure
 
 ```text
-Automated-Fundus-Disease-Detection/
+EyeDetect-AI/
 │
-├── Dataset/                 # Fundus image dataset
-├── Models/                  # Saved trained models
-├── Notebooks/               # Training and experimentation notebooks
-├── Images/                  # Sample images and outputs
-├── src/                     # Source code
-├── requirements.txt         # Required dependencies
-└── README.md                # Project documentation
-````
+├── frontend/
+│   ├── Home.jsx
+│   ├── Analyze.jsx
+│   ├── History.jsx
+│   ├── Progress.jsx
+│   ├── App.jsx
+│   └── Components/
+│
+├── chatbot/
+│   ├── chatbot_api.py
+│   ├── knowledge_base.py
+│   ├── language_detection.py
+│   ├── llm_service.py
+│   └── speech_service.py
+│
+├── model/
+│   ├── disease_detection_model
+│   └── prediction_pipeline
+│
+├── reports/
+│
+├── assets/
+│
+└── README.md
+```
 
-## 📊 Dataset
-
-The model is trained on retinal fundus image datasets containing multiple ocular disease categories.
-
-Typical disease classes may include:
-
-* Diabetic Retinopathy
-* Glaucoma
-* Cataract
-* Age-related Macular Degeneration (AMD)
-* Normal Retina
-
-> Ensure compliance with the dataset license before usage.
+---
 
 ## ⚙️ Installation
 
-### 1. Clone the Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/gaurishkale/Automated-Fundus-Disease-Detection.git
+
 cd Automated-Fundus-Disease-Detection
 ```
 
-### 2. Create Virtual Environment
+---
+
+## 🔧 Backend Setup
+
+Create virtual environment:
 
 ```bash
 python -m venv venv
@@ -73,116 +200,153 @@ python -m venv venv
 
 Activate environment:
 
-**Windows**
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-**Linux / Mac**
+### Linux / Mac
 
 ```bash
 source venv/bin/activate
 ```
 
-### 3. Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🏋️ Model Training
-
-Run the training notebook or script:
+Start FastAPI server:
 
 ```bash
-python train.py
+uvicorn main:app --reload
 ```
 
-The trained model will be saved in the `Models/` directory.
-
-## 🔍 Prediction
-
-To perform disease prediction on a new fundus image:
-
-```bash
-python predict.py --image path_to_image.jpg
-```
-
-Example Output:
+Backend runs at:
 
 ```text
-Prediction: Diabetic Retinopathy
-Confidence: 96.4%
+http://localhost:8000
 ```
 
-## 📈 Evaluation Metrics
+---
 
-The model is evaluated using:
+## 🌐 Frontend Setup
 
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
+Install dependencies:
 
-## 🖼️ Sample Workflow
+```bash
+npm install
+```
 
-1. Upload Fundus Image
-2. Image Preprocessing
-3. Feature Extraction
-4. Deep Learning Inference
-5. Disease Prediction
-6. Result Visualization
+Run development server:
+
+```bash
+npm run dev
+```
+
+Frontend runs at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🤖 Ollama Setup
+
+Install Ollama:
+
+```bash
+ollama pull phi3:mini
+```
+
+Run model:
+
+```bash
+ollama run phi3:mini
+```
+
+Verify:
+
+```bash
+ollama list
+```
+
+---
+
+## 🎤 Voice Features Setup
+
+Install Faster Whisper:
+
+```bash
+pip install faster-whisper
+```
+
+Install Edge TTS:
+
+```bash
+pip install edge-tts
+```
+
+---
+
+## 📊 Workflow
+
+1. Patient enters information
+2. Fundus image is uploaded
+3. AI model analyzes image
+4. Disease prediction is generated
+5. Confidence score is calculated
+6. Report is created
+7. Results are stored in history
+8. Patient can interact with AI chatbot
+9. Voice assistant enables hands-free interaction
+10. Analytics dashboard tracks screening trends
+
+---
+
+## 📈 Future Enhancements
+
+- Explainable AI (Grad-CAM)
+- Cloud Deployment
+- Mobile Application
+- Electronic Health Record Integration
+- Multi-Disease Classification Expansion
+- Real-Time Clinical Monitoring
+- Multi-Language Expansion
+
+---
 
 ## 🎯 Applications
 
-* Eye Disease Screening
-* Clinical Decision Support
-* Telemedicine Solutions
-* Rural Healthcare Assistance
-* AI-assisted Ophthalmology
+- Eye Disease Screening
+- Telemedicine
+- Clinical Decision Support
+- Rural Healthcare Assistance
+- Ophthalmology Clinics
+- Healthcare Research
 
-## 🔮 Future Improvements
-
-* Multi-label disease detection
-* Explainable AI (Grad-CAM)
-* Web Application Deployment
-* Real-time Prediction API
-* Mobile-based Screening Solution
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Submit a Pull Request
-
-## 📜 License
-
-This project is licensed under the MIT License.
+---
 
 ## 👨‍💻 Author
 
 **Gaurish Kale**
 
-* AIML Engineer
-* AI & Machine Learning Enthusiast
-* GitHub: [https://github.com/gaurishkale](https://github.com/gaurishkale)
+Artificial Intelligence & Machine Learning Engineer
+
+GitHub: https://github.com/gaurishkale
 
 ---
 
-⭐ If you found this project useful, please consider giving it a star!
+## ⭐ Support
 
-```
+If you found this project useful, consider giving it a **Star ⭐** on GitHub.
 
-Since this is your AIML project portfolio repository, I would also recommend adding:
-- Model accuracy/results screenshots
-- Confusion matrix image
-- Sample fundus images with predictions
-- Architecture diagram
+---
 
-Those additions make recruiters much more likely to notice the project.
-```
+### Disclaimer
+
+This system is intended for educational and screening purposes only. It does not replace professional medical diagnosis, treatment, or consultation by a qualified ophthalmologist.
+````
