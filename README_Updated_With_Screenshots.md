@@ -61,6 +61,11 @@ The system analyzes retinal fundus images, predicts possible eye diseases, gener
 - Lifestyle improvement suggestions
 
 ---
+## UI
+<img width="1366" height="637" alt="eye 1" src="https://github.com/user-attachments/assets/fefff5aa-d6f0-416c-b614-50dbccacb6ab" />
+<img width="1366" height="632" alt="1000553638" src="https://github.com/user-attachments/assets/4819aa11-6f80-4f72-bd80-7e8fe052531c" />
+<img width="1366" height="633" alt="1000553636" src="https://github.com/user-attachments/assets/decedcb6-5b20-49b0-bded-37428d891f14" />
+
 
 ## 🏗️ System Architecture
 
