@@ -359,7 +359,8 @@ This system is intended for educational and screening purposes only. It does not
 
 ## 🏠 Landing Page
 
-![Landing Page](eye%201(2).jpeg)
+<img width="1366" height="637" alt="eye 1" src="https://github.com/user-attachments/assets/7ba08320-cba5-4d96-b752-68a807db5eda" />
+
 
 ## 🔬 AI Disease Detection Workflow
 
